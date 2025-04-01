@@ -36,5 +36,5 @@
 
 ## Επικοινωνία  
 Για ερωτήσεις ή διευκρινίσεις, επικοινωνήστε μαζί μας:  
-📧 Email: [studentconf@uop.gr](mailto:studentconf@uop.gr)  
+📧 Email: [kseklou@uop.gr](mailto:kseklou@uop.gr)  
 🌐 Website: [https://dit.uop.gr/studentconf](https://dit.uop.gr/studentconf)
