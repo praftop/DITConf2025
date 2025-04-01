@@ -1,0 +1,146 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX root =  main.tex
+\usepackage{letter}
+\usepackage{colortbl}
+\usepackage{soul}
+\usepackage{xltxtra} 
+\usepackage{xgreek} 
+\usepackage{fontspec}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+
+% Header and Footer
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{\footnotesize{1ο Φοιτητικό Συνέδριο Πληροφορικής \& Τηλεπικοινωνιών}}{\footnotesize{1ο Φοιτητικό Συνέδριο Πληροφορικής \& Τηλεπικοινωνιών}}}
+\rhead{ \fancyplain{\footnotesize{Πανεπιστήμιο Πελοποννήσου, Τρίπολη}}{\footnotesize{Πανεπιστήμιο Πελοποννήσου, Τρίπολη}} }
+%\lfoot{ \fancyplain{}{\footnotesize{11 Ιουνίου 2025}} }
+\rfoot{ \fancyplain{\thepage}{\thepage} }
+
+%
+% Tables
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+
+%
+% Page size
+\usepackage[margin=2.5cm]{geometry}
+% \setlength{\textheight}{23cm}
+% \setlength{\textwidth}{15.5cm}
+% \setlength{\oddsidemargin}{0.2cm}
+% \setlength{\evensidemargin}{0.2cm}
+% \setlength{\topmargin}{-1.2cm}
+% %\setlength{\headsep}{1.5cm}
+% \setlength{\footskip}{2cm} % space between page number and text
+
+% 1.2 spacing
+ %\renewcommand{\baselinestretch}{1.1}
+
+%
+% Fonts sets
+\setmainfont[ItalicFont=cmunsl.ttf,BoldFont=cmunbx.ttf,SmallCapsFont=cmunbx.ttf]{cmunrm.ttf}  
+%\setmainfont[Mapping=tex-text]{CMU Serif} 
+%\setmainfont[Mapping=tex-text]{Marion} 
+%\setmainfont[Mapping=tex-text]{Athelas} 
+
+\setmonofont{Courier New}
+%\setmonofont{Tahoma}
+
+\frenchspacing
+
+%
+% Definitions
+\newtheorem{definition}{Ορισμός}
+\newtheorem{theorem}{Θεώρημα}
+\newenvironment{proof}{\noindent{\bf Απόδειξη:}}{\rule[-0.25mm]{0.25cm}{0.25cm}\vspace{1.5ex}}
+\newcommand{\proofEnd}{\ \rule[-0.25mm]{0.25cm}{0.25cm}}
+\newcommand{\defEnd}{\ \rule[-0.25mm]{0.25cm}{0.25cm}}
+
+%
+% Algorithms
+\usepackage[figure,vlined,linesnumbered]{algorithm2e}
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\SetKwInOut{Parameter}{Parameter}
+\SetKwInput{Algorithm}{Algorithm}
+\SetKwInput{Remark}{Remark}
+\SetKw{Let}{Let}
+\SetKw{Add}{Add}
+\SetKwComment{Comment}{{// }}{}
+
+%
+% References
+% \usepackage[colorlinks,linkcolor=blue,linktocpage]{hyperref}
+\usepackage[colorlinks,linkcolor=blue,citecolor=blue,urlcolor=blue,linktocpage]{hyperref}
+
+% Code
+\definecolor{customgreen}{rgb}{0,0.6,0}
+\definecolor{customgray}{rgb}{0.5,0.5,0.5}
+\definecolor{custommauve}{rgb}{0.6,0,0.8}
+\lstset{ 
+  basicstyle=\small\ttfamily,%,        % the size of the fonts that are used for the code
+  breaklines=true,                 % sets automatic line breaking
+  commentstyle=\color{customgreen},    % comment style
+  firstnumber=1,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=10pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{customgray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{custommauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  aboveskip=-10pt,% 
+  belowskip=10pt,%
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+%
+% SQL
+\lstnewenvironment{SQLcode}{%
+\lstset{language=SQL,%
+%keywordstyle=\bf\sffamily\color{blue},%
+%commentstyle=\color{ForestGreen},%
+%stringstyle=\color{Maroon},%
+%basicstyle=\ttfamily\normalsize\color{black},%
+%frame=lines,%
+showspaces=false,% 
+showstringspaces=false,%
+tabsize=4,% 
+%aboveskip=-10pt,% 
+%belowskip=10pt,%
+lineskip=2pt%
+% numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, numberblanklines=false, %
+% breaklines, breakatwhitespace, prebreak=\_, breakindent=0pt %
+}}
+{}
+
+%
+% LaTeX
+\lstnewenvironment{latex}{%
+\lstset{language=TeX,%
+keywordstyle=\bf\sffamily\color{blue},%
+commentstyle=\color{ForestGreen},%
+stringstyle=\color{Maroon},%
+basicstyle=\ttfamily\normalsize\color{black},%
+%frame=lines,%
+showspaces=false,% 
+showstringspaces=false,%
+tabsize=4,% 
+aboveskip=10pt,% 
+belowskip=10pt,%
+lineskip=2pt%
+% numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, numberblanklines=false, %
+% breaklines, breakatwhitespace, prebreak=\_, breakindent=0pt %
+}}
+{}
+
+\bibliographystyle{plain}
