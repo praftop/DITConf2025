@@ -1,0 +1,99 @@
+%% letter.sty - 
+% Class options:
+% nofigure: include no figure in the logo
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myletter}[2005/09/07 My letterhead]
+\RequirePackage{graphicx}
+
+%
+% Declare Options
+%
+\DeclareOption{noimage}{\def\logoimage{\hspace*{3cm}}}
+
+%
+% ProcessOptions
+%
+\ProcessOptions
+
+% Letter margins A4
+\setlength{\oddsidemargin}{2.5pt}      % Left margin on odd-numbered pages.
+\setlength{\evensidemargin}{2.5pt}     % Left margin on even-numbered pages.
+\setlength{\topmargin}{-6pt}
+\setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{22cm}
+
+% Increase the indent for right stuff a little to 55%
+%\longindentation=.55\textwidth
+%\indentedwidth=\textwidth
+%\advance\indentedwidth -\longindentation
+
+% No page numbers
+%\thispagestyle{empty} 
+
+% This is the LOGO of the letter 
+\newcommand{\logo}[2]{                      
+    \null
+    \vspace{-4cm}
+    \begingroup
+    \vspace{10pt}
+    \begin{minipage}[t]{3cm}
+        %\center
+        \hspace{-10pt}
+        \includegraphics[width=2.5cm]{#1}
+    \end{minipage}
+    \begin{minipage}[r]{12.5cm}
+        \raggedleft
+        \input{#2}
+    \end{minipage}
+    \endgroup
+    \par
+}
+
+% This is the LOGO of the letter (without figure)
+\newcommand{\logonofigure}[1]{                      
+    \null
+    \vspace{-1cm}
+    \begingroup
+        \raggedleft
+        \input{#1}
+    \endgroup
+    \par
+}
+
+\def\showname{
+    \vspace{2ex}
+    {\raggedleft \fromname\par}
+    %\vspace{1.5ex}
+}
+
+\def\showinfo#1{
+    \vspace{-1ex}
+    {\raggedleft #1\par}
+}
+
+% Show date in a decent format 
+\renewcommand*{\today}{\number\day\space
+   \ifcase\month\or
+   January\or February\or March\or April\or May\or June\or
+   July\or August\or September\or October\or November\or December\fi
+   \space\number\year}
+
+\def\showdate{
+    \vspace{1ex}
+    {\raggedleft  \hfill\hbox{\@date}}
+    \vspace{1ex}
+}
+
+\def\receiver#1{
+    \vspace{2ex}
+    #1
+    \vspace{2ex}
+}
+
+
+\def\dear#1{
+    \vspace{2ex}
+    #1
+    \vspace{2ex}
+}
