@@ -3,7 +3,8 @@
 ![Conference Date](https://img.shields.io/badge/Ημερομηνία-11%20Ιουνίου%202025-blue)  
 ![Submission Deadline](https://img.shields.io/badge/Προθεσμία%20Υποβολής-23%20Μαΐου%202025-red)  
 
-![DITConf2025 Banner](assets/studentconfhigh.png)
+![studentconfhigh](https://github.com/user-attachments/assets/e53bd78b-7e7f-4988-81dd-de0a74d5c315)
+
 
 ## Περιγραφή  
 Το παρόν αποθετήριο περιέχει το πρότυπο **LaTeX** για τις εργασίες που θα σταλούν στο 1ο Φοιτητικό Συνέδριο του Τμήματος Πληροφορικής και Τηλεπικοινωνιών του Πανεπιστημίου Πελοποννήσου.
